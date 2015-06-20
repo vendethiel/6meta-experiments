@@ -1,6 +1,5 @@
 role Zero { }
 role Suc[::N] { }
-subset Nat where Zero|Suc;
 
 multi sub count(Zero) { 0 }
 multi sub count(Suc[::N]) { 1 + count(N) }
