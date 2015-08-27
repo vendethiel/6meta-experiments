@@ -16,4 +16,10 @@ role Add[Zero, ::N, Result = N] {}
 
 role Add[Suc[::N], ::N2, Result = Add[N, Suc[N2]].Result] {}
 
+#role Ret[Int, TYPE = Str] {}
+#role Ret[Str, TYPE = Int] {}
+#
+#sub rev(::T $a --> Ret[T].TYPE) {}
+
+
 say count(Add[_3, _1].Result);
